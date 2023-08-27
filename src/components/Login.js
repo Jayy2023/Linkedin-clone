@@ -11,8 +11,14 @@ export default function Login(props) {
             </a>
             <div>
                 <Join>Join Now</Join>
+                <SignIn>Sign In</SignIn>
             </div>
         </Nav>
+        <Section>
+            <Hero>
+                <h1>Welcome to your professional community</h1>
+            </Hero>
+        </Section>
     </Container>
    
   )
@@ -36,6 +42,46 @@ const Join = styled.a`
 
     }
 
+`
+const Hero = styled.div`
+
+`
+const SignIn = styled.a`
+    box-shadow: inset 0 0 0 1px #0a66c2;
+    color: #0a66c2;
+    border-radius: 24px;
+    transition-duration: 167ms;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 40px;
+    padding: 10px 24px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    &:hover{
+        background-color: rgba(112, 181, 249, 0.15);
+        color: #0a66c2;
+        text-decoration: none;
+
+    }
+`
+const Section = styled.section`
+    align-content: start;
+    display: flex;
+    min-height: 700px;
+    padding-bottom: 138px;
+    padding-top: 40px;
+    padding: 60px 0;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 128px;
+    align-items: center;
+    margin: auto;
+    @media(max-width:768px)  {
+        margin: auto;
+        min-height: 0px;
+    }
 `
 const Nav = styled.nav`
     max-width: 1128px;
