@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from "styled-components";
 import Header from './Header';
+import LeftSide from './LeftSide';
+import RightSide from './RightSide';
+import MainSide from './MainSide';
 
 export default function Home(props) {
   return (
@@ -13,6 +16,12 @@ export default function Home(props) {
         </h5>
         <p>Find talented pros in record time with Upwork and keep business moving.</p>
     </Section>
+        <Layout>
+           <LeftSide/>
+           <MainSide/>
+           <RightSide/>
+           
+        </Layout>
  </Container>
  </>
   )
@@ -53,5 +62,21 @@ const Section = styled.section `
         flex-direction: column;
         padding: 0 5px;
      }
+`
+const Layout = styled.div`
+    display: grid;
+    grid-template-areas: "leftside mainside rightside";
+    grid-template-columns: minmax(0, 5) minmax(0, 12) minmax(300px, 7);
+    column-gap: 25px;
+    row-gap: 25px;
+    /* grid-template-rows: auto; */
+    margin: 25px;
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5px;
+
+
+    }
 `
 
